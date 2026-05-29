@@ -1,302 +1,199 @@
-/* ===================================================
-   SONG YOUNG-HO — JavaScript Interactions
-   =================================================== */
+// Translations mapping (Korean and Khmer)
+const translations = {
+    ko: {
+        nav_about: "About",
+        nav_journey: "Journey",
+        nav_philosophy: "Philosophy",
+        nav_achievements: "Achievements",
+        nav_vision: "Vision",
+        nav_contact: "Contact",
+        hero_subtitle: "한국 장애인 배드민턴의 개척자 · 글로벌 코치",
+        hero_desc: "청각장애 스포츠계의 불모지를 개척하고 세계 무대에서 금메달을 일군 한국 최고의 스포츠 지도자.",
+        stat_medals: "데플림픽 메달",
+        stat_years: "지도자 경력(년)",
+        btn_collab: "협업 문의하기",
+        about_title: "ABOUT THE PIONEER",
+        about_subtitle: "국가대표급 탑티어 플레이어에서, <span class='gold-text'>세계를 잇는 지도자</span>로.",
+        about_p1: "송영호 감독은 선수 시절의 영광에 안주하지 않고, 가장 소외되었던 청각장애 스포츠 영역에 뛰어들었습니다.",
+        about_p2: "그의 헌신적인 지도는 한국을 세계 무대의 정상으로 이끌었으며, 이제는 글로벌 무대에서 스포츠 리더십의 새로운 패러다임을 제시하고자 합니다.",
+        journey_title: "HIS JOURNEY",
+        journey_1_title: "국가대표 선수 시절",
+        journey_1_desc: "탁월한 기량으로 국가대표로 활약하며 배드민턴 엘리트 코스를 밟음.",
+        journey_2_title: "장애인 스포츠의 개척",
+        journey_2_desc: "청각장애 선수들의 잠재력을 발견하고 맞춤형 코칭 시스템을 개발함.",
+        journey_3_title: "세계를 향한 도약",
+        journey_3_desc: "국경을 넘어 세계 각국의 팀과 선수를 양성하는 글로벌 코치로 활동.",
+        philosophy_title: "COACHING PHILOSOPHY",
+        phil_1_title: "시각적 소통",
+        phil_1_desc: "언어의 장벽을 넘는 직관적이고 시각적인 전술 훈련.",
+        phil_2_title: "신뢰와 교감",
+        phil_2_desc: "선수와의 깊은 유대감을 통한 심리적 안정감 부여.",
+        phil_3_title: "맞춤형 체력 훈련",
+        phil_3_desc: "개개인의 신체적 특성에 맞춘 과학적인 트레이닝.",
+        phil_4_title: "전략적 통찰",
+        phil_4_desc: "세계 무대 트렌드를 반영한 날카로운 경기 분석.",
+        phil_5_title: "잠재력 발굴",
+        phil_5_desc: "단점 보완보다 장점을 극대화하는 긍정적 코칭.",
+        phil_6_title: "글로벌 스탠다드",
+        phil_6_desc: "어느 국가, 어느 팀에서도 통용되는 체계적인 시스템.",
+        achiev_title: "ACHIEVEMENTS",
+        th_year: "연도",
+        th_event: "대회",
+        th_result: "성과",
+        achiev_1_event: "🇩🇰 덴마크 코펜하겐 세계 농아인 체육대회",
+        achiev_1_result: "메달 획득",
+        achiev_2_event: "🇮🇹 이탈리아 로마 데플림픽 (세계 농아인 올림픽)",
+        achiev_2_result: "<strong>금메달 포함 총 7개 메달</strong> <br><span class='text-sm text-muted'>(한국 전체의 50%)</span>",
+        achiev_3_event: "🇧🇬 불가리아 제1회 세계 농아 배드민턴 대회",
+        achiev_3_result: "청소년 대표팀 종합 우승",
+        vision_title: "GLOBAL VISION",
+        vision_desc: "송영호 감독의 비전은 한국을 넘어 세계로 향합니다. 아시아를 시작으로 전 세계의 스포츠 리더들과 협력하며, 국경과 장애를 초월하는 배드민턴 교육의 새 지평을 열어갈 것입니다.",
+        contact_title: "GET IN TOUCH",
+        contact_subtitle: "새로운 도전을 함께할 파트너를 찾습니다.",
+        contact_email: "이메일",
+        contact_collab_title: "협업 가능 분야",
+        collab_1: "청각장애 배드민턴 코칭 협업",
+        collab_2: "해외 팀 / 국가대표팀 코칭 파견",
+        collab_3: "강연 / 스포츠 리더십 세미나",
+        collab_4: "국제 스포츠 기구 협력 네트워크",
+        opt_coaching: "코칭 파견 문의",
+        opt_seminar: "세미나/강연 문의",
+        opt_collab: "기타 협업",
+        btn_send: "메시지 보내기",
+        footer_text: "송영호 글로벌 코칭 · 한국 스포츠 지도자 해외 진출 지원 사업 연계"
+    },
+    km: {
+        nav_about: "អំពី", // About
+        nav_journey: "ដំណើរ", // Journey
+        nav_philosophy: "ទស្សនវិជ្ជា", // Philosophy
+        nav_achievements: "សមិទ្ធផល", // Achievements
+        nav_vision: "ចក្ខុវិស័យ", // Vision
+        nav_contact: "ទំនាក់ទំនង", // Contact
+        hero_subtitle: "អ្នកត្រួសត្រាយកីឡាវាយសីជនពិការកូរ៉េ · គ្រូបង្វឹកសកល", // Pioneer of Korean disabled badminton · Global coach
+        hero_desc: "គ្រូបង្វឹកកីឡាល្អបំផុតនៅប្រទេសកូរ៉េ ដែលបានត្រួសត្រាយផ្លូវក្នុងកីឡាជនថ្លង់ និងឈ្នះមេដាយមាសលើឆាកអន្តរជាតិ។", // Korea's best sports leader...
+        stat_medals: "មេដាយ Deaflympic", // Deaflympic Medals
+        stat_years: "បទពិសោធន៍ (ឆ្នាំ)", // Coaching Experience (Years)
+        btn_collab: "សាកសួរកិច្ចសហការ", // Contact for collaboration
+        about_title: "អំពីអ្នកត្រួសត្រាយ",
+        about_subtitle: "ពីអតីតកីឡាករជម្រើសជាតិ ទៅជា <span class='gold-text'>គ្រូបង្វឹកលំដាប់ថ្នាក់អន្តរជាតិ</span>។",
+        about_p1: "លោក Song Young-ho មិនត្រឹមតែឈប់ត្រឹមភាពជោគជ័យក្នុងនាមជាកីឡាករនោះទេ តែលោកបានបោះជំហានចូលទៅក្នុងវិស័យកីឡាសម្រាប់ជនថ្លង់ ដែលជាវិស័យមួយដែលមិនសូវមានគេចាប់អារម្មណ៍។",
+        about_p2: "ការលះបង់របស់លោកបានដឹកនាំប្រទេសកូរ៉េទៅកាន់កំពូលនៃឆាកអន្តរជាតិ ហើយពេលនេះលោកចង់បង្ហាញនូវគំរូថ្មីនៃភាពជាអ្នកដឹកនាំកីឡានៅលើឆាកសកលលោក។",
+        journey_title: "ដំណើររបស់គាត់",
+        journey_1_title: "សម័យកាលកីឡាករជម្រើសជាតិ",
+        journey_1_desc: "មានសកម្មភាពយ៉ាងសកម្មក្នុងនាមជាកីឡាករជម្រើសជាតិជាមួយនឹងជំនាញដ៏អស្ចារ្យ។",
+        journey_2_title: "ការត្រួសត្រាយកីឡាសម្រាប់ជនពិការ",
+        journey_2_desc: "ស្វែងរកសក្តានុពលរបស់កីឡាករថ្លង់ និងអភិវឌ្ឍប្រព័ន្ធបង្វឹកដែលសមស្រប។",
+        journey_3_title: "ការឈានទៅរកពិភពលោក",
+        journey_3_desc: "បម្រើការជាគ្រូបង្វឹកសកលបណ្តុះបណ្តាលក្រុម និងកីឡាករមកពីជុំវិញពិភពលោក។",
+        philosophy_title: "ទស្សនវិជ្ជានៃការបង្វឹក",
+        phil_1_title: "ការប្រាស្រ័យទាក់ទងជាលក្ខណៈមើលឃើញ",
+        phil_1_desc: "ការហ្វឹកហាត់យុទ្ធសាស្ត្រដែលឆ្លងកាត់របាំងភាសា។",
+        phil_2_title: "ទំនុកចិត្ត និង ការប្រាស្រ័យទាក់ទង",
+        phil_2_desc: "ផ្តល់នូវស្ថេរភាពផ្លូវចិត្តតាមរយៈទំនាក់ទំនងស៊ីជម្រៅជាមួយកីឡាករ។",
+        phil_3_title: "ការបណ្តុះបណ្តាលរាងកាយតាមតម្រូវការ",
+        phil_3_desc: "ការបណ្តុះបណ្តាលតាមបែបវិទ្យាសាស្ត្រស្របតាមលក្ខណៈរាងកាយនីមួយៗ។",
+        phil_4_title: "ការយល់ដឹងអំពីយុទ្ធសាស្ត្រ",
+        phil_4_desc: "ការវិភាគការប្រកួតដ៏មុតស្រួចឆ្លុះបញ្ចាំងពីនិន្នាការពិភពលោក។",
+        phil_5_title: "ការស្វែងរកសក្តានុពល",
+        phil_5_desc: "ការបង្វឹកជាវិជ្ជមានដែលពង្រីកចំណុចខ្លាំង។",
+        phil_6_title: "ស្តង់ដារសកល",
+        phil_6_desc: "ប្រព័ន្ធរៀបចំដែលអាចប្រើបាននៅក្នុងប្រទេសណាមួយ និងក្រុមណាមួយ។",
+        achiev_title: "សមិទ្ធផល",
+        th_year: "ឆ្នាំ",
+        th_event: "ព្រឹត្តិការណ៍",
+        th_result: "លទ្ធផល",
+        achiev_1_event: "🇩🇰 កូប៉ិនហាក ដាណឺម៉ាក កីឡាថ្លង់ពិភពលោក",
+        achiev_1_result: "ឈ្នះមេដាយ",
+        achiev_2_event: "🇮🇹 រ៉ូម អ៊ីតាលី Deaflympics",
+        achiev_2_result: "<strong>មេដាយសរុប ៧ រួមទាំងមេដាយមាស</strong> <br><span class='text-sm text-muted'>(៥០% នៃប្រទេសកូរ៉េសរុប)</span>",
+        achiev_3_event: "🇧🇬 ប៊ុលហ្គារី ការប្រកួតកីឡាវាយសីថ្លង់ពិភពលោកលើកទី១",
+        achiev_3_result: "ជើងឯកទូទៅក្រុមជម្រើសជាតិយុវជន",
+        vision_title: "ចក្ខុវិស័យសកល",
+        vision_desc: "ចក្ខុវិស័យរបស់លោកគ្រូបង្វឹក Song Young-ho គឺហួសពីប្រទេសកូរ៉េទៅកាន់ពិភពលោក។ ដោយចាប់ផ្តើមពីអាស៊ី លោកនឹងសហការជាមួយថ្នាក់ដឹកនាំកីឡាជុំវិញពិភពលោក ដើម្បីបើកទំព័រថ្មីក្នុងការអប់រំកីឡាវាយសី ដែលឆ្លងកាត់ព្រំដែន និងពិការភាព។",
+        contact_title: "ទំនាក់ទំនង",
+        contact_subtitle: "ស្វែងរកដៃគូដើម្បីរួមគ្នាប្រឈមមុខនឹងបញ្ហាថ្មីៗ។",
+        contact_email: "អ៊ីមែល",
+        contact_collab_title: "វិស័យដែលអាចសហការបាន",
+        collab_1: "កិច្ចសហការបង្វឹកកីឡាវាយសីសម្រាប់ជនថ្លង់",
+        collab_2: "បញ្ជូនគ្រូបង្វឹកទៅក្រុមបរទេស / ក្រុមជម្រើសជាតិ",
+        collab_3: "សិក្ខាសាលាស្តីពីភាពជាអ្នកដឹកនាំកីឡា / ការបង្រៀន",
+        collab_4: "បណ្តាញសហប្រតិបត្តិការអង្គការកីឡាអន្តរជាតិ",
+        opt_coaching: "ការសាកសួរអំពីការបញ្ជូនគ្រូបង្វឹក",
+        opt_seminar: "ការសាកសួរអំពីសិក្ខាសាលា / ការបង្រៀន",
+        opt_collab: "កិច្ចសហការផ្សេងទៀត",
+        btn_send: "ផ្ញើសារ",
+        footer_text: "Song Young-ho Global Coaching · តភ្ជាប់ជាមួយគម្រោងគាំទ្រគ្រូបង្វឹកកីឡាកូរ៉េទៅក្រៅប្រទេស"
+    }
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  /* ── 1. Navigation scroll effect ── */
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }, { passive: true });
-
-  /* ── 2. Mobile Hamburger Menu ── */
-  const hamburger = document.getElementById('hamburger-btn');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      const isOpen = navLinks.classList.contains('open');
-      hamburger.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-      });
-    });
-  }
-
-  /* ── 3. Hero Particle Generator ── */
-  const particleContainer = document.getElementById('hero-particles');
-  if (particleContainer) {
-    for (let i = 0; i < 40; i++) {
-      const p = document.createElement('div');
-      p.classList.add('particle');
-      p.style.setProperty('--dur', `${4 + Math.random() * 6}s`);
-      p.style.setProperty('--delay', `${Math.random() * 8}s`);
-      p.style.left = `${Math.random() * 100}%`;
-      p.style.top = `${20 + Math.random() * 60}%`;
-      p.style.width = `${2 + Math.random() * 4}px`;
-      p.style.height = p.style.width;
-      // Alternate gold and blue
-      if (Math.random() > 0.5) {
-        p.style.background = '#d4a843';
-      } else {
-        p.style.background = '#3b82f6';
-        p.style.opacity = '0';
-      }
-      particleContainer.appendChild(p);
-    }
-  }
-
-  /* ── 4. Counter Animation ── */
-  const counters = document.querySelectorAll('.stat-num[data-target]');
-  let countersStarted = false;
-
-  function animateCounters() {
-    if (countersStarted) return;
-    const heroStats = document.getElementById('hero-stats');
-    if (!heroStats) return;
-    const rect = heroStats.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      countersStarted = true;
-      counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 1800;
-        const startTime = performance.now();
-        function update(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          // Ease out cubic
-          const eased = 1 - Math.pow(1 - progress, 3);
-          counter.textContent = Math.round(eased * target);
-          if (progress < 1) requestAnimationFrame(update);
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
-        requestAnimationFrame(update);
-      });
-    }
-  }
-
-  window.addEventListener('scroll', animateCounters, { passive: true });
-  animateCounters(); // Try immediately too
-
-  /* ── 5. Intersection Observer — Scroll Reveal ── */
-  const revealEls = document.querySelectorAll('.reveal');
-  const timelineItems = document.querySelectorAll('.timeline-item');
-  const coachingCards = document.querySelectorAll('.coaching-card');
-  const gpItems = document.querySelectorAll('.gp-item');
-
-  const observerOpts = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-  };
-
-  // Generic reveal
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
     });
-  }, observerOpts);
-  revealEls.forEach(el => revealObserver.observe(el));
 
-  // Timeline items with stagger
-  const timelineObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, i * 120);
-        timelineObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-  timelineItems.forEach(el => timelineObserver.observe(el));
-
-  // Coaching cards with stagger
-  const coachingObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-          entry.target.style.transitionDelay = `${i * 80}ms`;
-        }, i * 80);
-        coachingObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  coachingCards.forEach(el => coachingObserver.observe(el));
-
-  // Global points with stagger
-  const gpObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-          entry.target.style.transitionDelay = `${i * 120}ms`;
-        }, i * 120);
-        gpObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  gpItems.forEach(el => gpObserver.observe(el));
-
-  /* ── 6. About / Contact sections reveal ── */
-  const aboutText = document.getElementById('about-text');
-  const aboutVisual = document.getElementById('about-visual');
-  const contactWrap = document.getElementById('contact-wrap');
-
-  [aboutText, aboutVisual, contactWrap].forEach(el => {
-    if (el) {
-      el.classList.add('reveal');
-      revealObserver.observe(el);
-    }
-  });
-
-  /* ── 7. Achievements reveal ── */
-  const achMain = document.getElementById('ach-main');
-  const achCards = document.querySelectorAll('.ach-card');
-  if (achMain) {
-    achMain.classList.add('reveal');
-    revealObserver.observe(achMain);
-  }
-  achCards.forEach((card, i) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateX(20px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease';
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateX(0)';
-          }, i * 150);
-          obs.unobserve(card);
-        }
-      });
-    }, { threshold: 0.1 });
-    obs.observe(card);
-  });
-
-  /* ── 8. Quote section reveal ── */
-  const quoteBlock = document.getElementById('quote-block');
-  if (quoteBlock) {
-    quoteBlock.classList.add('reveal');
-    revealObserver.observe(quoteBlock);
-  }
-
-  /* ── 9. Hero background parallax (subtle) ── */
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent && scrollY < window.innerHeight) {
-      heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
-      heroContent.style.opacity = `${1 - scrollY / (window.innerHeight * 0.8)}`;
-    }
-  }, { passive: true });
-
-  /* ── 10. Active nav link highlighting ── */
-  const sections = document.querySelectorAll('section[id], header[id]');
-  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navAnchors.forEach(a => {
-          a.classList.remove('active');
-          if (a.getAttribute('href') === `#${id}`) {
-            a.classList.add('active');
-          }
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
-      }
-    });
-  }, { threshold: 0.35 });
-
-  sections.forEach(sec => sectionObserver.observe(sec));
-
-  /* ── 11. Contact form submit ── */
-  window.handleSubmit = function(e) {
-    e.preventDefault();
-    const btn = document.getElementById('btn-submit');
-    const successMsg = document.getElementById('form-success');
-    const originalHTML = btn.innerHTML;
-
-    btn.innerHTML = '<div class="btn-submit-text"><span>전송 중...</span><span class="btn-submit-km">កំពុងផ្ញើ...</span></div>';
-    btn.disabled = true;
-    btn.style.opacity = '0.7';
-
-    setTimeout(() => {
-      btn.innerHTML = '<div class="btn-submit-text"><span>✅ 전송 완료</span><span class="btn-submit-km">ផ្ញើរួចរាល់</span></div>';
-      btn.style.background = 'linear-gradient(135deg, #22c55e, #4ade80)';
-      if (successMsg) {
-        successMsg.style.display = 'block';
-        successMsg.style.opacity = '0';
-        successMsg.style.transform = 'translateY(10px)';
-        setTimeout(() => {
-          successMsg.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-          successMsg.style.opacity = '1';
-          successMsg.style.transform = 'translateY(0)';
-        }, 50);
-      }
-      // Reset after 4 seconds
-      setTimeout(() => {
-        btn.innerHTML = originalHTML;
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        btn.style.background = '';
-        e.target.reset();
-        if (successMsg) successMsg.style.display = 'none';
-      }, 4000);
-    }, 1500);
-  };
-
-  /* ── 12. Smooth nav active state CSS ── */
-  const styleEl = document.createElement('style');
-  styleEl.textContent = `
-    .nav-links a.active {
-      color: #d4a843 !important;
     }
-    .nav-links a {
-      position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 50%;
-      right: 50%;
-      height: 2px;
-      background: #d4a843;
-      border-radius: 1px;
-      transition: left 0.3s ease, right 0.3s ease;
-    }
-    .nav-links a:hover::after,
-    .nav-links a.active::after {
-      left: 10%;
-      right: 10%;
-    }
-    .nav-links .nav-cta::after { display: none; }
-  `;
-  document.head.appendChild(styleEl);
 
-  /* ── 13. Gold shimmer effect on hero title ── */
-  const titleLine2 = document.querySelector('.title-line-2');
-  if (titleLine2) {
-    let angle = 135;
-    let direction = 1;
-    setInterval(() => {
-      angle += direction * 0.5;
-      if (angle > 160 || angle < 110) direction *= -1;
-      titleLine2.style.backgroundImage = `linear-gradient(${angle}deg, #d4a843, #f8e09a, #d4a843)`;
-    }, 50);
-  }
+    // Render bilingual content automatically
+    function renderBilingual() {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const isNav = el.closest('.nav-links') !== null;
+            
+            if (translations['ko'][key] && translations['km'][key]) {
+                if (isNav) {
+                    el.innerHTML = `${translations['ko'][key]}`;
+                } else {
+                    el.innerHTML = `${translations['ko'][key]}<div class="km-text" style="color: var(--text-muted); font-size: 0.9em; margin-top: 4px; font-weight: normal; font-family: 'Noto Sans KR', sans-serif;">${translations['km'][key]}</div>`;
+                }
+            }
+        });
+    }
 
-  console.log('🏸 송영호 글로벌 코치 페이지 로드 완료');
+    renderBilingual();
+
+    // Number counters
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 15);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            // Only trigger once when visible
+            if(counter.getBoundingClientRect().top < window.innerHeight && counter.innerText === '0') {
+                updateCount();
+            }
+        });
+    };
+
+    window.addEventListener('scroll', animateCounters);
+    
+    // Initial trigger in case counters are visible on load
+    setTimeout(animateCounters, 500);
 });
