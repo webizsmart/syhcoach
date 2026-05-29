@@ -1386,3 +1386,355 @@ blockquote {
   .container { padding: 0 1.25rem; }
   .hero-ctas { flex-direction: column; align-items: center; }
 }
+
+/* ===================================================
+   KHMER (CAMBODIAN) TRANSLATION STYLES
+   =================================================== */
+.nav-links a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+}
+.nav-sub-lang {
+  font-size: 0.65rem;
+  opacity: 0.75;
+  margin-top: 1px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.hero-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.badge-km {
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
+.hero-title-sub {
+  display: block;
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+  font-family: var(--font-kr);
+  font-weight: 700;
+  margin-top: 0.5rem;
+  letter-spacing: 0;
+}
+.title-line-1 .hero-title-sub {
+  color: var(--gray-300);
+}
+.title-line-2 .hero-title-sub {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle-km {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-top: 0.75rem;
+  font-weight: 400;
+}
+.stat-label-km {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  padding: 0.7rem 1.8rem;
+  gap: 2px;
+}
+.btn-text-km {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+.card-name-km {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gold-300);
+  margin-top: 4px;
+}
+.card-title-km {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+.tag-km {
+  font-size: 0.9em;
+  opacity: 0.9;
+  display: inline-block;
+  margin-left: 2px;
+}
+.section-title-km {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 700;
+  color: var(--gold-300);
+  margin-top: 0.5rem;
+  line-height: 1.3;
+}
+.about-desc-km {
+  display: block;
+  font-size: 0.85em;
+  color: var(--gray-300);
+  margin-top: 0.8rem;
+  line-height: 1.8;
+}
+.hl-km-title {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--gold-300);
+  margin-top: 1px;
+}
+.hl-km-sub {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-top: 1px;
+}
+.section-desc-km {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+.tl-year-km {
+  font-size: 0.7rem;
+  color: var(--gold-300);
+  opacity: 0.9;
+  margin-top: 1px;
+}
+.tl-title-km {
+  display: block;
+  font-size: 0.85em;
+  color: var(--gold-300);
+  font-weight: 500;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+.tl-desc-km {
+  display: block;
+  font-size: 0.85em;
+  color: var(--gray-300);
+  margin-top: 6px;
+  line-height: 1.75;
+}
+.medal-km {
+  font-size: 0.85em;
+  opacity: 0.9;
+  display: inline-block;
+  margin-left: 4px;
+}
+.coaching-card-km-title {
+  display: block;
+  font-size: 0.85em;
+  color: var(--gold-300);
+  font-weight: 500;
+  margin-top: 4px;
+}
+.coaching-card-km-desc {
+  display: block;
+  font-size: 0.82em;
+  color: var(--gray-300);
+  margin-top: 6px;
+  line-height: 1.7;
+}
+.c-tag-km {
+  font-size: 0.95em;
+  opacity: 0.9;
+  display: inline-block;
+  margin-left: 4px;
+}
+.bm-label-km {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+.bm-sub-km {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+.ac-title-km {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gold-300);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+.ac-desc-km {
+  display: block;
+  font-size: 0.82em;
+  color: var(--gray-300);
+  margin-top: 6px;
+  line-height: 1.7;
+}
+.ac-medal-km {
+  font-size: 0.9em;
+  opacity: 0.9;
+  display: inline-block;
+  margin-left: 4px;
+}
+.leg-km {
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-left: 2px;
+}
+.gp-title-km {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gold-300);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+.gp-desc-km {
+  display: block;
+  font-size: 0.82em;
+  color: var(--gray-300);
+  margin-top: 6px;
+  line-height: 1.7;
+}
+.quote-km {
+  display: block;
+  font-size: 0.75em;
+  opacity: 0.85;
+  margin-top: 1rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+.qa-km {
+  display: block;
+  font-size: 0.8em;
+  color: var(--gold-400);
+  margin-top: 2px;
+  font-weight: 400;
+}
+.contact-desc-km {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+.ci-km {
+  display: block;
+  font-size: 0.82em;
+  opacity: 0.8;
+  margin-top: 1px;
+}
+.contact-email-link {
+  color: var(--gold-400);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+.contact-email-link:hover {
+  color: var(--gold-200);
+}
+.form-label-km {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.75;
+  margin-left: 6px;
+  color: var(--gold-300);
+}
+.btn-submit-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+.btn-submit-km {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+.success-km {
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+.logo-km-inline {
+  font-size: 0.8rem;
+  color: var(--gray-300);
+  font-weight: 500;
+}
+.footer-desc-km {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.85;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.footer-links a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+}
+.footer-link-km {
+  font-size: 0.65rem;
+  opacity: 0.75;
+  margin-top: 1px;
+}
+.footer-bottom-km {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+.footer-credit-km {
+  font-size: 0.7rem;
+  color: var(--gold-600);
+  text-align: right;
+  margin-top: 2px;
+}
+@media (max-width: 768px) {
+  .footer-links a {
+    align-items: flex-start;
+  }
+  .footer-credit-km {
+    text-align: center;
+  }
+}
+
+/* ===================================================
+   SINGLE COLUMN CONTACT STYLES
+   =================================================== */
+.contact-wrap.single {
+  grid-template-columns: 1fr;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-wrap.single .contact-infos {
+  align-items: center;
+  text-align: left;
+  max-width: 520px;
+  margin: 2rem auto 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+.contact-wrap.single .ci-item {
+  width: 100%;
+}

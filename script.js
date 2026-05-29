@@ -228,12 +228,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const successMsg = document.getElementById('form-success');
     const originalHTML = btn.innerHTML;
 
-    btn.innerHTML = '<span>전송 중...</span>';
+    btn.innerHTML = '<div class="btn-submit-text"><span>전송 중...</span><span class="btn-submit-km">កំពុងផ្ញើ...</span></div>';
     btn.disabled = true;
     btn.style.opacity = '0.7';
 
     setTimeout(() => {
-      btn.innerHTML = '<span>✅ 전송 완료</span>';
+      btn.innerHTML = '<div class="btn-submit-text"><span>✅ 전송 완료</span><span class="btn-submit-km">ផ្ញើរួចរាល់</span></div>';
       btn.style.background = 'linear-gradient(135deg, #22c55e, #4ade80)';
       if (successMsg) {
         successMsg.style.display = 'block';
